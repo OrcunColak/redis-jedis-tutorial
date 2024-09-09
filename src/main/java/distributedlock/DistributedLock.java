@@ -23,6 +23,7 @@ class DistributedLock {
 
     private static boolean acquireLock(Jedis jedis, String lockValue) {
         SetParams params = new SetParams().nx().px(LOCK_EXPIRY);
+        // Set with expiry parameters
         String result = jedis.set(LOCK_KEY, lockValue, params);
         return "OK".equals(result);
     }
