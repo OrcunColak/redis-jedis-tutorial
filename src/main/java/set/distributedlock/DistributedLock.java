@@ -1,4 +1,4 @@
-package distributedlock;
+package set.distributedlock;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.params.SetParams;
